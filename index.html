@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+	
+		//create the audio tag using jquery
+		//include the drum kit mp3s
+		
+        var drum1 = document.createElement('audio');
+        drum1.setAttribute('src', 'atom/drum1.mp3');
+        var drum2 = document.createElement('audio');
+        drum2.setAttribute('src', 'atom/drum2.mp3');
+        var drum3 = document.createElement('audio');
+        drum3.setAttribute('src', 'atom/drum3.mp3');
+        var drum4 = document.createElement('audio');
+        drum4.setAttribute('src', 'atom/drum4.mp3');
+		var drum5 = document.createElement('audio');
+        drum5.setAttribute('src', 'atom/drum5.mp3');
+	    var drum6 = document.createElement('audio');
+        drum6.setAttribute('src', 'atom/drum6.mp3');
+		
+		
+	    var drum7 = document.createElement('audio');
+        drum7.setAttribute('src', 'atom/drum7.mp3');
+	    var drum7 = document.createElement('audio');
+        drum7.setAttribute('src', 'atom/drum.mp3');
+	    var drum8 = document.createElement('audio');
+        drum8.setAttribute('src', 'atom/drum8.mp3');
+	    var drum9 = document.createElement('audio');
+        drum6.setAttribute('src', 'atom/drum9.mp3');
+		
+		
+	    var drum10 = document.createElement('audio');
+        drum10.setAttribute('src', 'atom/drum10.mp3');
+		
+		
+		
+		
+	    var drum11 = document.createElement('audio');
+        drum11.setAttribute('src', 'atom/drum11.mp3');
+		
+		
+		
+		
+	    var drum12 = document.createElement('audio');
+        drum12.setAttribute('src', 'atom/drum12.mp3');
+		
+		
+		
+		var drum;
+
+        $('.drum').click(function() {
+		
+			//find the drum it and play the respective audio
+			drum = $(this).attr('id');
+			drum = eval(drum);
+			
+			if (drum.ended) {
+                drum.play();
+            } else {
+                try {
+                    drum.currentTime = 0;
+                } catch (e) {}
+                drum.play();
+            }
+        });
+	
+    });
+</script>
+</script>
+</head>
+<body>
+<center>
+  
+  <img src="images/drum.png" class="drum" id="drum1" border="0" /> <img src="images/drum.png" class="drum" id="drum2" border="0" /> <img src="images/drum.png" class="drum" id="drum3" border="0" /> <img src="images/drum.png" class="drum" id="drum4" border="0" /> <br />
+  <img src="images/drum.png" class="drum" id="drum5" border="0" /> <img src="images/drum.png" class="drum" id="drum6" border="0" /> <img src="images/drum.png" class="drum" id="drum7" border="0" /> <img src="images/drum.png" class="drum" id="drum8" border="0" /><img src="images/drum.png" class="drum" id="drum9" border="0" /><img src="images/drum.png" class="drum" id="drum10" border="0" /> <img src="images/drum.png" class="drum" id="drum11" border="0" /> <img src="images/drum.png" class="drum" id="drum12" border="0" /> <br />
+</center>
+</body>
+</html>
